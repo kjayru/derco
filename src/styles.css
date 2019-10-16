@@ -1,0 +1,236 @@
+body {
+  font-family: "Hind Siliguri";
+}
+header {
+  border-top: 3px solid #eb1d24;
+}
+header .bg-light {
+  background-color: transparent !important;
+  padding: 0 10px;
+}
+header .bg-light a {
+  padding: 0px;
+}
+
+section#filtro {
+  padding-top: 32px;
+  padding-bottom: 25px;
+  color: #363839;
+}
+section#filtro label {
+  font-size: 16px;
+  margin: 0 8px 0 20px;
+  text-transform: uppercase;
+}
+.text-modelo {
+  color: #919191;
+  font-size: 20px;
+}
+.text-modelo span {
+  font-weight: bold;
+}
+#footer {
+  background-color: #363839;
+  color: #8c8989;
+  padding: 40px 0 34px 0;
+  font-size: 12px;
+  line-height: 14px;
+}
+#footer2 {
+  background: #282a2b;
+  color: #8c8989;
+  padding: 21px 0 4px 0;
+  font-size: 15px;
+}
+.redes {
+  text-align: left;
+  display: block;
+  float: right;
+  padding-top: 45px;
+}
+.redes a {
+  padding: 10px 0 0 10px;
+}
+
+.slogan {
+  background: #eb1d24;
+  position: absolute;
+  display: block;
+  height: 79px;
+  width: 142px;
+  right: 0;
+  top: 0;
+  color: white;
+  border-bottom-left-radius: 25px;
+}
+span.numero {
+  font-size: 60px;
+  position: absolute;
+  left: 20px;
+  top: -4px;
+}
+span.porcentaje {
+  font-size: 30px;
+  position: absolute;
+  right: 33px;
+  top: 11px;
+}
+span.descuento {
+  position: absolute;
+  bottom: 11px;
+  font-size: 20px;
+  right: 15px;
+}
+.card {
+  height: 475px;
+  display: block;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 14px 0 rgba(191, 191, 191, 0.5);
+}
+.card .imagen {
+  padding: 100px 40px 20px 40px;
+}
+.card:hover {
+  box-shadow: 1px 8px 20px grey;
+  -webkit-transition: box-shadow 0.6s ease-in;
+}
+
+.precio {
+  position: absolute;
+  left: 0;
+  display: block;
+}
+span.monto {
+  font-size: 32px;
+  color: #eb1d24;
+  display: block;
+  padding-top: 14px;
+  padding-left: 25px;
+}
+
+span.tacha {
+  position: absolute;
+  left: 27px;
+  top: 50px;
+  font-size: 14px;
+  color: #636363;
+  text-decoration: line-through;
+}
+
+.title {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #636363;
+}
+.title span {
+  font-weight: bold;
+}
+.subtitle {
+  font-size: 17px;
+  font-weight: lighter;
+  color: #a4a4a4;
+  padding: 12px 20px;
+  line-height: 20px;
+}
+.botones {
+  padding: 6px 0 11px;
+  display: block;
+  margin-top: 6px;
+}
+a.btn.btn-cotiza {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 18px;
+  border: 1px solid #636363;
+  border-radius: 21px;
+  padding: 10px 90px;
+  transition-duration: 0.3s;
+}
+.btn-cotiza:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#eight {
+  position: relative;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.4s;
+}
+
+#eight::after {
+  content: "";
+  position: absolute;
+  background-color: blueviolet;
+  width: 0%;
+  height: 0%;
+  top: 45%;
+  left: 45%;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.4s;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+#eight:hover::after {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0;
+  border-radius: 0;
+}
+
+#eight:hover {
+  color: #fff;
+}
+
+section#legal {
+  font-size: 14px;
+  color: #636363;
+  padding: 50px 0;
+}
+.desactivado {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.7;
+  position: relative;
+  overflow: hidden;
+}
+
+.cintillo {
+  background: red;
+  padding: 9px;
+  color: white;
+  transform: rotate(-47deg);
+  position: absolute;
+  right: -45px;
+  display: block;
+  width: 190px;
+  bottom: 35px;
+}
+
+@media (max-width: 678px) {
+  .text-modelo p {
+    text-align: center;
+    padding: 26px 0;
+  }
+  #footer {
+    text-align: center;
+  }
+  .logo-footer img {
+    height: 80px;
+    margin-bottom: 27px;
+  }
+  #footer strong {
+    display: block;
+  }
+  .redes {
+    text-align: left;
+    display: block;
+    float: unset;
+    padding-top: 45px;
+    width: 136px;
+    margin: 0 auto;
+  }
+  #footer2 p {
+    font-size: 12px;
+  }
+}

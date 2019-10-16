@@ -1,0 +1,57 @@
+<section id="filtro">
+  <div class="container">
+    <div class="row content-justify-center">
+      <div class="col-md-8">
+        <form class="form-inline">
+          <div class="form-group mb-2 col-md-6">
+            <label>Filtrar por</label>
+            <select
+              class="form-control col-md-7"
+              name="ordenar"
+              id="ordenar"
+              (change)="onMarca($event)"
+            >
+              <option value="">Seleccione</option>
+              <option value="changan">CHANGAN</option>
+              <option value="Citroen">CITROEN</option>
+              <option value="greatwall">GREAT WALL</option>
+              <option value="haval">HAVAL</option>
+              <option value="jac">JAC</option>
+              <option value="mazda">MAZDA</option>
+              <option value="renault">RENAULT</option>
+              <option value="suzuki">SUZUKI</option>
+            </select>
+          </div>
+          <div class="form-group mb-2 col-md-6">
+            <label>Ordenar por</label>
+            <select
+              class="form-control col-md-7"
+              name="ordenar"
+              id="ordenar"
+              (change)="onOrden($event)"
+            >
+              <option value="">Seleccione</option>
+              <option value="1">MAYOR A MENOR DESCUENTO</option>
+              <option value="2">MENOR A MAYOR DESCUENTO</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-4 text-right text-modelo">
+        <p>Tienes <span>30 modelos disponibles</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<content id="grilla">
+  <div class="container">
+    <div class="row content-justify-center">
+      <app-oferta
+        class="col-md-4"
+        [ofertasi]="ofe"
+        *ngFor="let ofe of ofertass"
+      ></app-oferta>
+    </div>
+  </div>
+</content>
