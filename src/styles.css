@@ -64,10 +64,13 @@ section#filtro label {
   border-bottom-left-radius: 25px;
 }
 span.numero {
-  font-size: 60px;
-  position: absolute;
-  left: 20px;
-  top: -4px;
+    font-size: 60px;
+    position: absolute;
+    left: 17px;
+    top: -4px;
+    width: 65px;
+    display: block;
+    text-align: right;
 }
 span.porcentaje {
   font-size: 30px;
@@ -101,22 +104,58 @@ span.descuento {
   display: block;
 }
 span.monto {
-  font-size: 32px;
+  font-size: 22px;
   color: #eb1d24;
   display: block;
   padding-top: 14px;
   padding-left: 25px;
+  font-weight: 600;
+}
+span.monto2 {
+    font-size: 22px;
+    color: #eb1d24;
+    display: block;
+    padding-top: 0;
+    padding-left: 25px;
+    font-weight: 600;
+    margin-top: -13px;
 }
 
+span.monto2 b {
+    font-weight: 400;
+    font-size: 17px!important;
+    margin-right: 5px;
+    display: inline-block;
+}
 span.tacha {
-  position: absolute;
-  left: 27px;
-  top: 50px;
-  font-size: 14px;
-  color: #636363;
-  text-decoration: line-through;
+    position: absolute;
+    left: 66px;
+    top: 64px;
+    font-size: 13px;
+    color: #636363;
+   
+    display: inline-block;
+    width: 100%;
+    text-align: left;
 }
-
+span.tacha b{
+   text-decoration: line-through;
+   font-weight:normal;
+}
+span.antes {
+    position: absolute;
+    left: 27px;
+    top: 64px;
+    font-size: 13px;
+    color: #636363;
+}
+span.hasta {
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 27px;
+    font-size: 11px;
+}
 .title {
   font-size: 18px;
   text-transform: uppercase;
@@ -147,7 +186,8 @@ a.btn.btn-cotiza {
   transition-duration: 0.3s;
 }
 .btn-cotiza:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background: #eb1d24;
+  color:white;
 }
 
 #eight {

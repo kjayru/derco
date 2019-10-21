@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>Dercolanding</title>
-    <base href="http://mediacontacts-app.com/dercolanding/" />
-    <!--<base href="/" />-->
+    <title>DERCO PERÚ | 25 días de locura</title>
+    <meta
+      name="description"
+      content="Muchos modelos a precios irrepetibles hasta 35% dcto. ¡Cotiza el tuyo aquí!"
+    />
+    <!--<base href="/promociones/" />-->
+    <base href="/" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta
+      property="og:title"
+      itemprop="headline"
+      content="DERCO PERÚ | 25 días de locura"
+    />
+    <meta
+      property="og:description"
+      itemprop="description"
+      content="Muchos modelos a precios irrepetibles hasta 35% dcto. ¡Cotiza el tuyo aquí!"
+    />
+    <meta
+      property="og:image"
+      itemprop="image"
+      content="http://derco.com.pe/promociones/banner_facebook.jpg"
+    />
+    <meta
+      property="og:url"
+      itemprop="url"
+      content="https://derco.com.pe/promociones"
+    />
+
+    <link rel="icon" type="image/x-icon" href="Logo_16x16.jpg" />
     <link
       href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400,500,600,700&display=swap"
       rel="stylesheet"
@@ -19,6 +46,57 @@
     />
   </head>
   <body>
+    <!-- Global site tag (gtag.js) - Google Ads: 923613239 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-923613239"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-923613239");
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "443567366278405");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=443567366278405&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
     <app-root></app-root>
 
     <script

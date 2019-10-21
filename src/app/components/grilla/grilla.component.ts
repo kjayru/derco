@@ -8,10 +8,23 @@ import { OfertasService } from "../../services/ofertas.services";
 })
 export class GrillaComponent implements OnInit {
   ofertass: any[] = [];
+  cantidad:string;
+  numerico:number;
+  list: string[] = [];
 
   constructor(private ofertasService: OfertasService) {
     this.ofertasService.ofertas().subscribe((data: any) => {
-      this.ofertass = data.sort(this.sortByProperty("id"));
+    this.ofertass = data.sort(this.sortByProperty("id"));
+      
+
+      data.forEach(element => {
+        if(element.disponible==1){
+          this.list.push(element.id);
+        }
+      });
+
+      this.numerico = this.list.length;
+      this.cantidad = this.numerico+" modelos disponibles";
     });
   }
 
@@ -24,6 +37,10 @@ export class GrillaComponent implements OnInit {
       div.parentElement.style.display = "none";
       if (val.target.value == div.getAttribute("data-marca")) {
         div.parentElement.style.display = "";
+      }
+
+      if (val.target.value == 0) {
+        div.parentElement.style.display = "block";
       }
     });
   }
@@ -42,6 +59,11 @@ export class GrillaComponent implements OnInit {
   }
 
   evaluarpropiedad(val) {
+    if (val.target.value == 0) {
+      this.ofertasService.ofertas().subscribe((data: any) => {
+        this.ofertass = data.reverse(this.sortByProperty("descuento"));
+      });
+    }
     if (val.target.value == 1) {
       this.ofertasService.ofertas().subscribe((data: any) => {
         this.ofertass = data.sort(this.sortByProperty("id"));

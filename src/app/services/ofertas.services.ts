@@ -12,6 +12,7 @@ import {
 import { Observable } from "rxjs";
 import { tap } from "rxjs/operators";
 
+
 @Injectable({
   providedIn: "root"
 })
@@ -19,9 +20,19 @@ export class OfertasService {
   constructor(private http: HttpClient) {}
 
   ofertas(): Observable<Object> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer PAoHJDJsI4ABjcCkgbMGhmH0lj2nKy8CznxndVeVoKfb939paSg1k1Wj7tiH',
+        'Accept': '*/*'
+      })
+    };
+
     return this.http.get(
-      //"./../../assets/ofertas.json"
-      "http://mediacontacts-app.com/dercolanding/assets/ofertas.json"
+      //"http://landings.hww-dev.com/api/ofertas",httpOptions
+      "https://derco.com.pe/promociones/assets/ofertas.json"
+      //"https://mediacontacts-app.com/promociones/assets/ofertas.json"
     );
   }
 }

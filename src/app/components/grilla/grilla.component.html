@@ -11,9 +11,9 @@
               id="ordenar"
               (change)="onMarca($event)"
             >
-              <option value="">Seleccione</option>
+              <option value="0">Marca</option>
               <option value="changan">CHANGAN</option>
-              <option value="Citroen">CITROEN</option>
+              <option value="citroen">CITROEN</option>
               <option value="greatwall">GREAT WALL</option>
               <option value="haval">HAVAL</option>
               <option value="jac">JAC</option>
@@ -30,7 +30,7 @@
               id="ordenar"
               (change)="onOrden($event)"
             >
-              <option value="">Seleccione</option>
+              <option value="0">Descuentos</option>
               <option value="1">MAYOR A MENOR DESCUENTO</option>
               <option value="2">MENOR A MAYOR DESCUENTO</option>
             </select>
@@ -38,7 +38,7 @@
         </form>
       </div>
       <div class="col-md-4 text-right text-modelo">
-        <p>Tienes <span>30 modelos disponibles</span></p>
+       <p>Tienes <span >{{ cantidad }}</span></p>
       </div>
     </div>
   </div>

@@ -11,6 +11,6 @@ export class OfertaComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(this.ofertasi);
+   
   }
 }

@@ -6,17 +6,20 @@
 >
   <div class="card text-center desactivado" *ngIf="ofertasi.disponible == 0">
     <div class="slogan">
+      <span class="hasta">hasta</span>
       <span class="numero">{{ ofertasi.descuento }}</span>
       <span class="porcentaje">%</span><span class="descuento">dcto.</span>
     </div>
     <div class="precio">
       <span class="monto">{{ ofertasi.precioOferta }}</span>
-      <span class="tacha">{{ ofertasi.precio }}</span>
+      <span class="monto2"><b>o</b> {{ ofertasi.precioOferta2 }}</span>
+      <span class="antes">Antes</span>
+      <span class="tacha"><b>{{ ofertasi.precio }}</b> o <b>{{ofertasi.precio2}}</b></span>
     </div>
     <div class="imagen">
       <img [src]="ofertasi.imagen" alt="renault" class="img-fluid" srcset="" />
     </div>
-    <div class="title">{{ ofertasi.nombre }}</div>
+    <div class="title" [innerHTML]="ofertasi.nombre"></div>
     <div class="subtitle">
       {{ ofertasi.caracteristicas }}
     </div>
@@ -27,18 +30,21 @@
   </div>
 
   <div class="card text-center" *ngIf="ofertasi.disponible == 1">
-    <div class="slogan">
-      <span class="numero">{{ ofertasi.descuento }}</span>
-      <span class="porcentaje">%</span><span class="descuento">dcto.</span>
-    </div>
-    <div class="precio">
-      <span class="monto">{{ ofertasi.precioOferta }}</span>
-      <span class="tacha">{{ ofertasi.precio }}</span>
-    </div>
+      <div class="slogan">
+          <span class="hasta">Hasta</span>
+          <span class="numero">{{ ofertasi.descuento }}</span>
+          <span class="porcentaje">%</span><span class="descuento">dcto.</span>
+        </div>
+        <div class="precio">
+            <span class="monto">{{ ofertasi.precioOferta }}</span>
+            <span class="monto2"><b>o</b> {{ ofertasi.precioOferta2 }}</span>
+            <span class="antes">Antes</span>
+            <span class="tacha"><b>{{ ofertasi.precio }}</b> o <b>{{ofertasi.precio2}}</b></span>
+          </div>
     <div class="imagen">
       <img [src]="ofertasi.imagen" alt="renault" class="img-fluid" srcset="" />
     </div>
-    <div class="title">{{ ofertasi.nombre }}</div>
+    <div class="title" [innerHTML]="ofertasi.nombre"></div>
     <div class="subtitle">
       {{ ofertasi.caracteristicas }}
     </div>
